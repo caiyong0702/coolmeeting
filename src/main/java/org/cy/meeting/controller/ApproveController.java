@@ -18,6 +18,7 @@ public class ApproveController {
         System.out.println("test git first");
         System.out.println("test git second");
         System.out.println("test git third");
+        System.out.println("test git forth");
         return "approveaccount";
     }
     @RequestMapping("/updatestatus")
