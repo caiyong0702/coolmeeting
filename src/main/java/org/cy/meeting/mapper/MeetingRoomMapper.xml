@@ -1,0 +1,19 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cy.meeting.mapper.MeetingRoomMapper">
+    <select id="getAllMr" resultType="org.cy.meeting.model.MeetingRoom">
+        select * from meetingroom
+    </select>
+    <select id="getMrById" resultType="org.cy.meeting.model.MeetingRoom">
+        select * from meetingroom where roomid=#{roomid}
+    </select>
+    <update id="updateRoom" >
+        update meetingroom set roomnum=#{roomnum}, roomname=#{roomname}, capacity=#{capacity},status=#{status},description=#{description}
+        where roomid=#{roomid}
+    </update>
+    <insert id="addMr">
+        insert into meetingroom(roomnum,roomname,capacity,status,description)
+        values(#{roomnum},#{roomname},#{capacity},#{status},#{description})
+    </insert>
+</mapper>
