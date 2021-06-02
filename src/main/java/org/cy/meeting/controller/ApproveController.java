@@ -16,6 +16,7 @@ public class ApproveController {
     public String approveaccount(Model model){
         model.addAttribute("emps",employeeService.getAllEmps(pending_approve));
         System.out.println("test git");
+        System.out.println("test git second");
         return "approveaccount";
     }
     @RequestMapping("/updatestatus")
